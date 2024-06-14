@@ -6,7 +6,7 @@ function getHand() {
     return hands[parseInt(Math.random()*10)%3];
 }
 
-// Define two-player objects
+// Define player objects
 const player1 = {
     name: 'Player 1',
     getHand: getHand,
@@ -15,6 +15,18 @@ const player1 = {
 
 const player2 = {
     name: 'Player 2',
+    getHand: getHand,
+    wins: 0
+};
+
+const player3 = {
+    name: 'Player 3',
+    getHand: getHand,
+    wins: 0
+};
+
+const player4 = {
+    name: 'Player 4',
     getHand: getHand,
     wins: 0
 };
@@ -56,6 +68,18 @@ function playGame(player1, player2, playUntil) {
     return player1.wins > player2.wins ? player1 : player2;
 }
 
+// Define the playTournament function
+function playTournament(player1, player2, player3, player4, playUntil) {
+    const winner1 = playGame(player1, player2, playUntil);
+    const winner2 = playGame(player3, player4, playUntil);
+
+    const champion = playGame(winner1, winner2, playUntil);
+
+    console.log(champion.name + " is the world champion");
+}
+
 // Play a game to 3 wins
-let winner = playGame(player1, player2, 3);
-console.log(winner.name + " is the champion!");
+playGame(player1, player2, 3);
+
+// Play a tournament
+playTournament(player1, player2, player3, player4, 3);
