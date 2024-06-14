@@ -24,3 +24,7 @@ function playRound(player1, player2) {
     const hand1 = player1.getHand();
     const hand2 = player2.getHand();
 }
+
+// Log the hands played
+console.log(player1.name + ' played ' + hand1);
+console.log(player2.name + ' played ' + hand2);
