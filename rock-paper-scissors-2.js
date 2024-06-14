@@ -18,3 +18,9 @@ const player2 = {
     getHand: getHand,
     wins: 0
 };
+
+// Define the playRound function
+function playRound(player1, player2) {
+    const hand1 = player1.getHand();
+    const hand2 = player2.getHand();
+}
