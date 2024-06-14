@@ -57,3 +57,12 @@ function playGame(player1, player2, playUntil) {
     return player1.wins > player2.wins ? player1 : player2;
   }
   
+  // Define the playTournament function
+function playTournament(player1, player2, player3, player4, playUntil) {
+    const winner1 = playGame(player1, player2, playUntil);
+    const winner2 = playGame(player3, player4, playUntil);
+  
+    const champion = playGame(winner1, winner2, playUntil);
+  
+    console.log(champion.name + " is the world champion");
+  }
