@@ -47,3 +47,13 @@ if (hand1 === hand2) {
     return player2;
   }
 }
+
+// Define the playGame function
+function playGame(player1, player2, playUntil) {
+    while (player1.wins < playUntil && player2.wins < playUntil) {
+      playRound(player1, player2);
+    }
+  
+    return player1.wins > player2.wins ? player1 : player2;
+  }
+  
