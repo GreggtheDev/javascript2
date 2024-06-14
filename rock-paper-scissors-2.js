@@ -66,3 +66,9 @@ function playTournament(player1, player2, player3, player4, playUntil) {
   
     console.log(champion.name + " is the world champion");
   }
+
+  // Play a game to 3 wins
+playGame(player1, player2, 3);
+
+// Play a tournament
+playTournament(player1, player2, player3, player4, 3);
