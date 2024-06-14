@@ -28,3 +28,22 @@ function playRound(player1, player2) {
 // Log the hands played
 console.log(player1.name + ' played ' + hand1);
 console.log(player2.name + ' played ' + hand2);
+
+// Determine the winer
+if (hand1 === hand2) {
+    console.log("It's a tie!");
+    return null;
+  } else if (
+    (hand1 === 'rock' && hand2 === 'scissors') ||
+    (hand1 === 'scissors' && hand2 === 'paper') ||
+    (hand1 === 'paper' && hand2 === 'rock')
+  ) {
+    console.log(player1.name + ' wins!');
+    player1.wins++;
+    return player1;
+  } else {
+    console.log(player2.name + ' wins!');
+    player2.wins++;
+    return player2;
+  }
+}
