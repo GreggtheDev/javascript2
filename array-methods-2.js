@@ -18,3 +18,13 @@ function joinElements(arr, separator) {
 function sortArray(arr) {
     return arr.sort((a, b) => a - b);
 }
+
+// 3. Flattening Arrays
+/**
+ * This function flattens a nested array to a single level.
+ * @param {Array} arr - A nested array of any depth.
+ * @returns {Array} - A single-level array.
+ */
+function flattenArray(arr) {
+    return arr.flat(Infinity);
+}
