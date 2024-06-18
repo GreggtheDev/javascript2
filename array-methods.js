@@ -9,3 +9,7 @@ const users = [
     {id: 6929, firstName: 'Igor', lastName: 'Silenski', logins: 23, isPremiumMember: false},
     {id: 3879, firstName: 'Ira', lastName: 'Bolislovitz', logins: 9, isPremiumMember: false}
 ];
+
+// Find a user named 'Jose'
+let jose = users.find(user => user.firstName === 'Jose');
+console.log(jose);
