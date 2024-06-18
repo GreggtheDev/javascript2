@@ -8,3 +8,13 @@
 function joinElements(arr, separator) {
     return arr.join(separator);
 }
+
+// 2. Sorting Arrays
+/**
+ * This function sorts an array of numbers in ascending order.
+ * @param {Array} arr - An array of numbers.
+ * @returns {Array} - An array sorted in ascending order.
+ */
+function sortArray(arr) {
+    return arr.sort((a, b) => a - b);
+}
