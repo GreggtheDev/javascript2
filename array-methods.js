@@ -17,3 +17,7 @@ console.log(jose);
 // Get an array of all the premium members
 let premiumMembers = users.filter(user => user.isPremiumMember);
 console.log(premiumMembers);
+
+// Get an array of all the user last names
+let lastNames = users.map(user => user.lastName);
+console.log(lastNames);
