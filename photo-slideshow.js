@@ -15,3 +15,6 @@ let photoSlideshow = {// Declaration of main object
             console.log('Start of the slideshow');// Log the beginning of the slideshow
         }
     },
+    getCurrrentPhoto: function() {// Method for getting the current photo
+        return this.photoList[this.currentPhotoIndex];// Return the current photo
+    }
