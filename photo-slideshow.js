@@ -40,3 +40,4 @@ photoSlideShow.nextPhoto();
 photoSlideShow.nextPhoto();
 // Changes the current photo to the previous photo
 photoSlideShow.prevPhoto();
+console.log(this.photoList[this.currentPhotoIndex]);
