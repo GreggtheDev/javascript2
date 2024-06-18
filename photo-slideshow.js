@@ -1,27 +1,42 @@
-let photoSlideshow = {// Declaration of main object
-    photoList: ['photo1', 'photo2', 'photo3', 'photo4', 'photo5', 'photo6'],// Property with array of photos
-    currentPhotoIndex: 0,// Property with the index of the current photo
-    nextPhoto: function() {// Method for changing the current photo to the next photo
-        if(this.currrentPhotoIndex < this.photoList.length - 1) {// If the current photo is not the last photo
-            this.currentPhotoIndex++;// Increment the current photo index
-        } else {// If the current photo is the last photo
-            console.log('End of the slideshow');// Log the end of the slideshow
+// Declare the main object 'photoSlideShow'
+let photoSlideShow = {
+    // Property 'photoList' is an array of photos
+    photoList: ['photo1', 'photo2', 'photo3', 'photo4', 'photo5', 'photo6'],
+    // Property 'currentPhotoIndex' is the index of the current photo, starting at 0
+    currentPhotoIndex: 0,
+    // Method 'nextPhoto' changes the current photo to the next photo
+    nextPhoto: function() {
+        // If the current photo is not the last photo
+        if(this.currentPhotoIndex < this.photoList.length - 1) {
+            // Increment the current photo index
+            this.currentPhotoIndex++;
+        } else {
+            // If the current photo is the last photo, log the end of the slideshow
+            console.log('End of the slideshow');
         }
     },
-    prevPhoto: function() {// Method for changing the current photo to the previous photo
-        if(this.currrentPhotoIndex > 0) {// If the current photo is not the first photo
-            this.currentPhotoIndex--;// Decrement the current photo index
-        } else {// If the current photo is the first photo
-            console.log('Start of the slideshow');// Log the beginning of the slideshow
+    // Method 'prevPhoto' changes the current photo to the previous photo
+    prevPhoto: function() {
+        // If the current photo is not the first photo
+        if(this.currentPhotoIndex > 0) {
+            // Decrement the current photo index
+            this.currentPhotoIndex--;
+        } else {
+            // If the current photo is the first photo, log the beginning of the slideshow
+            console.log('Start of the slideshow');
         }
     },
-    getCurrrentPhoto: function() {// Method for getting the current photo
-        return this.photoList[this.currentPhotoIndex];// Return the current photo
+    // Method 'getCurrentPhoto' returns the current photo
+    getCurrentPhoto: function() {
+        return this.photoList[this.currentPhotoIndex];
     }
-};// End of main object declaration
+};
 
-// Test of the main object
-console.log(photoSlideshow.getCurrrentPhoto());// Outputs 'photo1'
-photoSlideshow.nextPhoto();// Outputs 'photo2'
-photoSlideshow.nextPhoto();// COutputs 'photo3'
-photoSlideshow.prevPhoto();// Outputs 'photo2'
+// Outputs the current photo
+console.log(photoSlideShow.getCurrentPhoto());
+// Changes the current photo to the next photo
+photoSlideShow.nextPhoto();
+// Changes the current photo to the next photo
+photoSlideShow.nextPhoto();
+// Changes the current photo to the previous photo
+photoSlideShow.prevPhoto();
