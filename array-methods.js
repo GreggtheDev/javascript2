@@ -21,3 +21,9 @@ console.log(premiumMembers);
 // Get an array of all the user last names
 let lastNames = users.map(user => user.lastName);
 console.log(lastNames);
+
+// Get an array of the full names who have logged in more than 10 times
+let frequentUsers = users
+    .filter(user => user.logins > 10)
+    .map(user => `${user.firstName} ${user.lastName}`);
+console.log(frequentUsers);
