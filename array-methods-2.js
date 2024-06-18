@@ -38,3 +38,15 @@ function flattenArray(arr) {
 function filterValues(arr) {
     return arr.filter(Boolean);
 }
+
+// 5. Computing the Union of Two Arrays
+/**
+ * This function computes the union of two arrays without duplicates.
+ * @param {Array} arr1 - The first array.
+ * @param {Array} arr2 - The second array.
+ * @returns {Array} - An array representing the union of the input arrays, sorted and without duplicates.
+ */
+function unionArrays(arr1, arr2) {
+    let union = [...new Set([...arr1, ...arr2])];
+    return union.sort((a, b) => a - b);
+}
