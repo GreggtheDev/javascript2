@@ -28,3 +28,13 @@ function sortArray(arr) {
 function flattenArray(arr) {
     return arr.flat(Infinity);
 }
+
+// 4. Filtering Array Values
+/**
+ * This function removes all false, null, 0, and blank values from an array.
+ * @param {Array} arr - An array containing various data types.
+ * @returns {Array} - An array with only truthy values.
+ */
+function filterValues(arr) {
+    return arr.filter(Boolean);
+}
