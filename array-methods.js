@@ -13,3 +13,7 @@ const users = [
 // Find a user named 'Jose'
 let jose = users.find(user => user.firstName === 'Jose');
 console.log(jose);
+
+// Get an array of all the premium members
+let premiumMembers = users.filter(user => user.isPremiumMember);
+console.log(premiumMembers);
