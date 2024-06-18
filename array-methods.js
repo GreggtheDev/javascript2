@@ -27,3 +27,7 @@ let frequentUsers = users
     .filter(user => user.logins > 10)
     .map(user => `${user.firstName} ${user.lastName}`);
 console.log(frequentUsers);
+
+// Get the total number of logins for the list of users
+let totalLogins = users.reduce((total, user) => total + user.logins, 0);
+console.log(totalLogins);
