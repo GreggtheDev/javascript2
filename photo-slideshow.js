@@ -18,3 +18,10 @@ let photoSlideshow = {// Declaration of main object
     getCurrrentPhoto: function() {// Method for getting the current photo
         return this.photoList[this.currentPhotoIndex];// Return the current photo
     }
+};// End of main object declaration
+
+// Test of the main object
+console.log(photoSlideshow.getCurrrentPhoto());// Outputs 'photo1'
+photoSlideshow.nextPhoto();// Outputs 'photo2'
+photoSlideshow.nextPhoto();// COutputs 'photo3'
+photoSlideshow.prevPhoto();// Outputs 'photo2'
